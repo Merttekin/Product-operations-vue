@@ -9,14 +9,14 @@
             class="table table-hover table-striped table-bordered"
             v-if="getProducts.length > 0"
           >
-            <thead>
+            <thead class="text-center">
               <th>id</th>
               <th>Ürün Adı</th>
               <th>Adet</th>
               <th>Fiyat</th>
               <th>Açıklama</th>
             </thead>
-            <tbody>
+            <tbody class="text-center">
               <tr v-for="product in getProducts" :key="product.key">
                 <td class="align-middle text-center">
                   <span class="badge badge-info">{{product.key}}</span>
@@ -31,7 +31,7 @@
               </tr>
             </tbody>
           </table>
-          <div class="alert alert-warning">
+          <div class="alert alert-warning" v-if="getProducts.length = 0">
             <strong>Henüz Burada Bir Kayıt Bulamadık</strong>
             <br>
             <small>Kayıt Eklemek için Ürün İşlemleri menüsünden yararlanabilirsiniz</small>
